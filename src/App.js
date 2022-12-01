@@ -1,11 +1,21 @@
 import Narvar from "./components/Narvar";
-import Header from "./Header";
+import { Box, Stack,createTheme, ThemeProvider } from "@mui/material";
+import Feed from "./components/Feed";
+import RightBar from "./components/RightBar";
+import LeftBar from "./components/LeftBar";
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+   <Box>
+      <Narvar />
+       <Stack direction={"row"} spacing={2} justifyContent={"space-between"}>
+           <LeftBar />
+            <Feed />
+           <RightBar/>
+       </Stack>
+   </Box>
+ 
   );
 }
 
